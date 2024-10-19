@@ -1,14 +1,9 @@
 package cat.tecnocampus.filterChain;
 
-import cat.tecnocampus.filterChain.Filter;
-import cat.tecnocampus.filterChain.FilterChain;
-import cat.tecnocampus.filterChain.Request;
-import cat.tecnocampus.filterChain.Response;
-
-public class FilterProxy implements Filter {
+public class FilterProxySubChain implements Filter {
     private final FilterChain subChain;
 
-    public FilterProxy(FilterChain subChain) {
+    public FilterProxySubChain(FilterChain subChain) {
         this.subChain = subChain;
     }
     @Override
